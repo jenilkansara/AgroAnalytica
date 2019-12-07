@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+
+    <link href="{{ url_for('static', filename='css/font-face.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/font-awesome-5/css/fontawesome-all.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS-->
+    <link href="{{ url_for('static', filename='vendor/bootstrap-4.1/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{{ url_for('static', filename='vendor/animsition/animsition.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/wow/animate.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/slick/slick.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/perfect-scrollbar/perfect-scrollbar.css') }}" rel="stylesheet">
+
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+
+
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="index.html">
+                    <font size="+2">એગ્રો એનાલિટીકા</font>
+                    <!-- img src="{{ url_for('static', filename='images/icon/logo.png')}}" alt="CoolAdmin" / -->
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-tachometer-alt"></i>મુખ્ય પાનું</a>
+
+                        </li>
+                        <li>
+                            <a href="market.html">
+                                <i class="fas fa-rupee-sign"></i>પાકની કિંમત</a>
+                        </li>
+                        <li>
+                            <a href="rainfall.html">
+                                <i class="fas fa-cloud-rain"></i>વરસાદ</a>
+                        </li>
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="weather.html">
+                                <i class="fas fa-temperature-high"></i>તાપમાન</a>
+                        </li>
+                        <li>
+                            <a href="pesticide.html">
+                                <i class="far fa-check-square"></i>પેસ્ટીસાઇડ </a>
+                        </li>
+                        <li>
+                            <a href="commodities.html">
+                                <i class="far fa-window-maximize"></i>કૃષિ મંત્ર</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap"></div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="">
+                <div class="section__content ">
+                    <iframe src="http://10.20.24.22:8053/" width="100%" height="1220" frameBorder="0">
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+     <script src="{{ url_for('static', filename='vendor/jquery-3.2.1.min.js') }}"></script>
+    <!-- Bootstrap JS-->
+     <script src="{{ url_for('static', filename='vendor/bootstrap-4.1/popper.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
+    <!-- Vendor JS       -->
+    <script src="{{ url_for('static', filename='vendor/slick/slick.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='vendor/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/animsition/animsition.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/counter-up/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/counter-up/jquery.counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/circle-progress/circle-progress.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/chartjs/Chart.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+
+    <!-- Main JS-->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
+<!-- end document-->

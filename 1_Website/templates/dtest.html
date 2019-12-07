@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Now UI Dashboard by Creative Tim
+  </title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+  <link href="../public/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../public/css/now-ui-dashboard.css?v=1.3.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+
+  <script src="../public/css/map.js" type="text/javascript"></script>
+  <script src="../public/css/crop.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/css/jquery.js"></script>
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <style type="text/css">
+  #root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ .info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.side,{
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 70px;
+  left: 0;
+  float: left;
+  background-color: 'orange';
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.side a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  }
+ .side a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+  .dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+  height: 200px;
+  overflow-y: scroll;
+
+
+}
+
+.dropdown-container a:hover {color: #f1f1f1;}
+
+.dropdown-container:hover .dropdown-container {display: block;}
+.dropdown-container a {
+  color: #818181;
+  font-size: 20px;
+  padding-left: 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  position: relative;
+  float: right;
+  width: 1020px;
+
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  position: relative;
+  float: right;
+  width: 1020px;
+  height: 300px;
+}
+.gg .search-container {
+  float: right;
+}
+
+.gg input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.gg .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.gg .search-container button:hover {
+  background: #ccc;
+}
+.gg input[type=text] {
+    border: 1px solid #ccc;
+  }
+
+  #main-panel {
+  position: relative;
+  padding-bottom: 400px;
+  float: right;
+  width: 520px;
+  height: 400px;
+ /* background-color: #141E30;*/
+  background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
+  .slideshow{
+    width: 100%;
+    position: absolute;
+  }
+  </style>
+
+</head>
+
+<body class="">
+  <div class="slidshow" ><marquee id="m" direction="right"></marquee></div>
+  <script type="text/javascript">
+    var a = [];
+    $.getJSON('http://127.0.0.1:3500/api/market', function(data) {
+        for(i=0; i<data.length; i++){
+        var text = `Commodity: ${data[i].Commodity}
+                    Market: ${data[i].Market}
+                    Price: ${data[i].Modal_Price} |`
+        a.push(text.bold());
+      }
+      document.getElementById("m").innerHTML = a;
+      });
+  </script>>
+  <!--<div class="wrapper ">-->
+    <div class="sidebar" style="margin-top: " data-color="orange" style="float: left;">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo" id="logos">
+
+        <h1 class="simple-text logo-normal"> Krushi_Mantra </h1>
+        <script type="text/javascript" src= /css/ex.js></script>
+
+      </div>
+
+     <div class="sidebar-wrapper" id="sidebar-wrapper">
+
+
+            <div class="side" data-color="orange" style="padding-bottom: 10px;">
+
+              <button class="dropdown-btn">Commodities
+              <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container" id="dropdown-container">
+
+
+                <a href="#">Select Commodity</a>
+                <a href="#" onclick="arhar(); build1('#commoditydata');" id="a1">Arhar(Tur/Red Gram)</a>
+                <a href="#" onclick="bajra(); build2('#commoditydata');" id="b1">Bajra</a>
+                <a href="#" onclick="barley(); build3('#commoditydata');">Barley(Jau)</a>
+                <a href="#" onclick="bengal_gram(); build4('#commoditydata');">Bengal Gram</a>
+                <a href="#" onclick="black_gram(); build5('#commoditydata');">Black Gram</a>
+                <a href="#" onclick="copra(); build6('#commoditydata');">Copra</a>
+                <a href="#" onclick="cotton(); build7('#commoditydata');">Cotton</a>
+                <a href="#" onclick="green_gram(); build8('#commoditydata');">Green Gram(Moong)</a>
+                <a href="#" onclick="groundnut(); build9('#commoditydata');">Groundnut</a>
+                <a href="#" onclick="jowar(); build10('#commoditydata');">Jowar(Sorghum)</a>
+                <a href="#" onclick="jute(); build11('#commoditydata');">Jute</a>
+                <a href="#" onclick="lentil(); build12('#commoditydata');">Lentil(Masur)</a>
+                <a href="#" onclick="maize(); build13('#commoditydata');">Maize</a>
+                <a href="#" onclick="mustard(); build14('#commoditydata');">Mustard</a>
+                <a href="#" onclick="nigarseed(); build15('#commoditydata');">Nigar Seed(Ramtil)</a>
+                <a href="#" onclick="onion(); build16('#commoditydata');">Onion</a>
+                <a href="#" onclick="basmati(); build17('#commoditydata');">Paddy(Dhan)(Basmati)</a>
+                <a href="#" onclick="common(); build18('#commoditydata');">Paddy(Dhan)(Common)</a>
+                <a href="#" onclick="potato(); build19('#commoditydata');">Potato</a>
+                <a href="#" onclick="ragi(); build20('#commoditydata');">Ragi(Finger Millet)</a>
+                <a href="#" onclick="sufflower(); build21('#commoditydata');">Safflower</a>
+                <a href="#" onclick="sesamum(); build22('#commoditydata');">Sesamum(Sesame,Gingelly,Til)</a>
+                <a href="#" onclick="soyabean(); build23('#commoditydata');">Soyabean</a>
+                <a href="#" onclick="sugarcane(); build24('#commoditydata');">Sugarcane</a>
+                <a href="#" onclick="sunflower(); build25('#commoditydata');">Sunflower</a>
+                <a href="#" onclick="tomato(); build26('#commoditydata');">Tomato</a>
+                <a href="#" onclick="toria(); build27('#commoditydata');">Toria</a>
+                <a href="#" onclick="wheat(); build28('#commoditydata');">Wheat</a>
+
+              </div>
+              <button class="dropdown-btn">Weather
+              <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container" id="dropdown-container">
+                <a href="#" onclick='show()' id="t">Temperature</a>
+                <a href="#" onclick='showwind()' id="w">Wind</a>
+
+              </div>
+            </div>
+            <script type="text/javascript">
+
+              var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+
+              for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                  } else {
+                    dropdownContent.style.display = "block";
+                  }
+                });
+              }
+            </script>
+        </div>
+
+    </div>
+      <div style="width: 500px; float: right; background-color: #D3D3D3; overflow-y: scroll; height: 400px; border: 2px solid black; border-color: 'black';">
+        <table id="commoditydata" border="1"></table>
+
+
+      <script type="text/javascript">
+
+        // Builds the HTML Table out of myList.
+
+      </script>
+     </div>
+        <div id= "main-panel">
+
+                <script src="../public/css/g.geojson"></script>
+
+                <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+                <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                <script src="../public/css/map.js">
+
+                </script>
+        </div>
+          <div class="tab">
+            <button class="tablinks" id="first" onclick="openGraph(event, 'Graph1')">GRAPH1</button>
+            <button class="tablinks" id="second" onclick="openGraph(event, 'Graph2')">GRAPH2</button>
+            <button class="tablinks" id="third" onclick="openGraph(event, 'Graph3')">GRAPH3</button>
+          </div>
+          <script type="text/javascript" src="../public/css/menu.js"></script>
+          <div id="Graph1" class="tabcontent">
+           <div style="width: 30%; height: 350px; float: right;" id="GG1" class="gg">
+            <div class="search-container">
+
+              <select id="mySelect" onchange="check()">
+                <option value="Select district">Select district</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Amreli">Amreli</option>
+                <option value="Anand">Anand</option>
+
+                <option value="Bharuch">Bharuch</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Botad">Botad</option>
+                <option value="Dahod">Dahod</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+                <option value="Jamnagar">Jamnagar</option>
+                <option value="Junagadh">Junagadh</option>
+                <option value="Kheda">Kheda</option>
+                <option value="Morbi">Morbi</option>
+
+                <option value="Porbandar">Porbandar</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Surat">Surat</option>
+                <option value="Surendranagar">Surendranagar</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Valsad">Valsad</option>
+
+              </select>
+              <select id="myCommodity" onchange="check()">
+                <option value="Select district">Select district</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Amreli">Amreli</option>
+                <option value="Anand">Anand</option>
+                <option value="Banaskantha">Banaskantha</option>
+                <option value="Bharuch">Bharuch</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Botad">Botad</option>
+                <option value="Dahod">Dahod</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+                <option value="Jamnagar">Jamnagar</option>
+                <option value="Junagadh">Junagadh</option>
+                <option value="Kheda">Kheda</option>
+                <option value="Morbi">Morbi</option>
+                <option value="Patan">Patan</option>
+                <option value="Porbandar">Porbandar</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Surat">Surat</option>
+                <option value="Surendranagar">Surendranagar</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Valsad">Valsad</option>
+
+              </select>
+
+          </div>
+          </div>
+           <div style="width:70%; border: 1px solid black; height: 300px;" class="" id="G1">
+            <canvas id="myChart"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+            <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+            <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+            <script type="text/javascript" src="../public/css/graph1.js"></script>
+          <!--  <script type="text/javascript">
+
+              //var Chart = require('chart.js');
+              $("#dropdown-container a").click(function(e){
+
+                e.preventDefault();
+                 var toShow = $(this).attr('id');
+                 if(toShow=="t"){
+                  alert("one");
+                  document.getElementById("mySelect").onchange = function(){
+
+                    if()
+                    $.getJSON('http://localhost:3500/weather/weekly-temp-analysis/Ahmedabad').done(function(data) {
+                        var search = document.getElementById('mySelect').value;
+
+                        alert("hhihhh");
+
+
+                    var options = {
+                      title: {
+                        text: "Weekly Temperature Analysis"
+                      },
+                      axisX: {
+                        labelFontSize: 20,
+                        labelFontColor: "dimGrey",
+                        title: "Date"
+                      },
+                      axisY: {
+                        title: "Temperature(in Celsius)"
+                      },
+                      animationEnabled: true,
+                      exportEnabled: true,
+                      data: [
+                      {
+                        type: "spline",
+                        showInLegend: true,
+                        legendText: "Average Temperature", //change it to line, area, column, pie, etc
+                        dataPoints: [
+
+                          { x: 1, y: data[0].average_temperature, label: data[0].date },
+                          { x: 2, y: data[1].average_temperature, label: data[1].date },
+                          { x: 3, y: data[2].average_temperature, label: data[2].date },
+                          { x: 4, y: data[3].average_temperature, label: data[3].date },
+                          { x: 5, y: data[4].average_temperature, label: data[4].date },
+                          { x: 6, y: data[5].average_temperature, label: data[5].date },
+
+
+                        ]
+                      },
+                      {
+                        type: "spline",
+                        showInLegend: true,
+                        legendText: "Maximum Temperature", //change it to line, area, column, pie, etc
+                        dataPoints: [
+
+                          { x: 1, y: data[0].maximum_temperature, label: data[0].date },
+                          { x: 2, y: data[1].maximum_temperature, label: data[1].date },
+                          { x: 3, y: data[2].maximum_temperature, label: data[2].date },
+                          { x: 4, y: data[3].maximum_temperature, label: data[3].date },
+                          { x: 5, y: data[4].maximum_temperature, label: data[4].date },
+                          { x: 6, y: data[5].maximum_temperature, label: data[5].date },
+
+                        ]
+
+                      },
+                      {
+                        type: "spline",
+                        showInLegend: true,
+                        legendText: "Minimum Temperature", //change it to line, area, column, pie, etc
+                        dataPoints: [
+
+                          { x: 1, y: data[0].minimum_temperature, label: data[0].date },
+                          { x: 2, y: data[1].minimum_temperature, label: data[1].date },
+                          { x: 3, y: data[2].minimum_temperature, label: data[2].date },
+                          { x: 4, y: data[3].minimum_temperature, label: data[3].date },
+                          { x: 5, y: data[4].minimum_temperature, label: data[4].date },
+                          { x: 6, y: data[5].minimum_temperature, label: data[5].date },
+
+                          ]
+
+                      }
+                      ]
+                    };
+                    $("#G1").CanvasJSChart(options);
+
+                    })
+
+                    };
+                  }
+
+            else if(toShow=="w"){
+
+                  document.getElementById('mySelect').onchange = function(){
+
+
+                    $.getJSON('http://localhost:3500/weather/weekly-wind-analysis/Ahmedabad').done(function(data) {
+                        var search = document.getElementById('mySelect').value;
+
+
+                        var options = {
+                          title: {
+                            text: "Weekly Wind Analysis"
+                          },
+                          axisX: {
+                            labelFontSize: 20,
+                            labelFontColor: "dimGrey",
+                            title: "Date"
+                          },
+                          axisY: {
+                            title: "Wind Speed(in km/hr)"
+                          },
+                          animationEnabled: true,
+                          exportEnabled: true,
+                          data: [
+                          {
+                            type: "spline",
+                            showInLegend: true,
+                            legendText: "Average Wind Speed", //change it to line, area, column, pie, etc
+                            dataPoints: [
+
+                              { x: 1, y: data[0].average_wind_speed, label: data[0].date },
+                              { x: 2, y: data[1].average_wind_speed, label: data[1].date },
+                              { x: 3, y: data[2].average_wind_speed, label: data[2].date },
+                              { x: 4, y: data[3].average_wind_speed, label: data[3].date },
+                              { x: 5, y: data[4].average_wind_speed, label: data[4].date },
+                              { x: 6, y: data[5].average_wind_speed, label: data[5].date },
+
+
+                            ]
+                          },
+                          {
+                            type: "spline",
+                            showInLegend: true,
+                            legendText: "Maximum Wind Speed", //change it to line, area, column, pie, etc
+                            dataPoints: [
+
+                              { x: 1, y: data[0].maximum_wind_speed, label: data[0].date },
+                              { x: 2, y: data[1].maximum_wind_speed, label: data[1].date },
+                              { x: 3, y: data[2].maximum_wind_speed, label: data[2].date },
+                              { x: 4, y: data[3].maximum_wind_speed, label: data[3].date },
+                              { x: 5, y: data[4].maximum_wind_speed, label: data[4].date },
+                              { x: 6, y: data[5].maximum_wind_speed, label: data[5].date },
+
+                            ]
+
+                          },
+                          {
+                            type: "spline",
+                            showInLegend: true,
+                            legendText: "Minimum Wind Speed", //change it to line, area, column, pie, etc
+                            dataPoints: [
+
+                              { x: 1, y: data[0].minimum_wind_speed, label: data[0].date },
+                              { x: 2, y: data[1].minimum_wind_speed, label: data[1].date },
+                              { x: 3, y: data[2].minimum_wind_speed, label: data[2].date },
+                              { x: 4, y: data[3].minimum_wind_speed, label: data[3].date },
+                              { x: 5, y: data[4].minimum_wind_speed, label: data[4].date },
+                              { x: 6, y: data[5].minimum_wind_speed, label: data[5].date },
+
+                              ]
+
+                          }
+                          ]
+                        };
+                        $("#G1").CanvasJSChart(options);
+
+                        })
+
+                    };
+                  }
+              })
+            </script>-->
+          </div>
+
+        </div>
+
+
+          <div id="Graph2" class="tabcontent">
+            <div style="width: 30%; float: right;" id="GG2" class="ggg">
+              <div class="search-container">
+                <select id="mySelect2" onchange="check2()">
+                <option value="Select district">Select district</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Amreli">Amreli</option>
+                <option value="Anand">Anand</option>
+                <option value="Banaskantha">Banaskantha</option>
+                <option value="Bharuch">Bharuch</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Botad">Botad</option>
+                <option value="Dahod">Dahod</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+                <option value="Jamnagar">Jamnagar</option>
+                <option value="Junagadh">Junagadh</option>
+                <option value="Kheda">Kheda</option>
+                <option value="Morbi">Morbi</option>
+
+                <option value="Porbandar">Porbandar</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Surat">Surat</option>
+                <option value="Surendranagar">Surendranagar</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Valsad">Valsad</option>
+
+              </select>
+
+
+                Date: <input type="date" id="datepicker"><br>
+                <button type="button" id="link1">Submit</button>
+
+              </div>
+            </div>
+            <div style="width:70%" class="" id="G2">
+              <canvas id="myChart1"></canvas>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+              <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+              <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+              <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+              <script type="text/javascript">
+
+                $("#dropdown-container a").click(function(e){
+
+
+                  e.preventDefault();
+                   var toShow = $(this).attr('id');
+                   if(toShow=="t"){
+
+                     document.getElementById("mySelect2").onchange = function(){
+                      var s = document.getElementById('mySelect2').value;
+                      var d = document.getElementById('datepicker').value;
+                        if(s == "Ahmedabad"){
+
+                            $.getJSON("http://127.0.0.1:3500/weather/temperature/Ahmedabad", function(data) {
+
+                                var date = new Date(d);
+                                var formattedDate = date.getDate();
+                                var formattedMonth = ('0' + (date.getMonth() + 1)).slice(-2);
+                                var formattedYear = date.getFullYear().toString().substr(2,2);
+                                var dateString = formattedYear + '-' + formattedMonth + '-' + formattedDate;
+                                alert(dateString);
+
+                                var time = [];
+                                var temp = [];
+                                count = 0
+                                for (var i in data){
+                                  if(data[i].date == dateString){
+                                    count = count + 1
+                                    time.push(data[i].time);
+                                    temp.push(data[i].temperature);
+                                  }
+                                }
+                                alert(count);
+                                var options2 = {
+                                title: {
+                                  text: "Temperature Day to Day"
+                                },
+                                axisX: {
+                                  labelFontSize: 20,
+                                  labelFontColor: "dimGrey",
+                                  title: "Date"
+                                },
+                                axisY: {
+                                  title: "Temperature(in Celsius)"
+                                },
+                                animationEnabled: true,
+                                exportEnabled: true,
+                                data: [
+                                {
+                                  type: "spline",
+                                  showInLegend: true,
+                                  legendText: "Temperature", //change it to line, area, column, pie, etc
+                                  dataPoints: [
+
+                                    { x: 1, y: temp[0], label: time[0] },
+                                    { x: 2, y: temp[1], label: time[1] },
+                                    { x: 3, y: temp[2], label: time[2] },
+                                    { x: 4, y: temp[3], label: time[3] },
+                                    { x: 5, y: temp[4], label: time[4] },
+                                    { x: 6, y: temp[5], label: time[5] },
+                                    { x: 7, y: temp[6], label: time[6] },
+                                    { x: 8, y: temp[7], label: time[7] },
+                                    //{ x: 9, y: temp[23], label: time[23] },
+                                    //{ x: 10, y: temp[26], label: time[26] },
+                                    //{ x: 11, y: temp[29], label: time[29] },
+                                    //{ x: 12, y: temp[32], label: time[32] },
+                                    //{ x: 4, y: b[3].temperature, label: b[3].date }
+
+                                  ]
+                                },
+
+                                ]
+                              };
+
+                              $("G2").CanvasJSChart(options2);
+
+                            });
+                          }
+                        };
+                      }
+                  })
+
+              </script>
+            </div>
+
+          </div>
+
+          <div id="Graph3" class="tabcontent">
+            <div style="width: 20%; height: 300px; float: right;" id="GG3" class="gggg">
+            <div class="search-container">
+
+              <select id="mySelect1" onchange="check1()">
+                <option value="Select district">Select district</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Amreli">Amreli</option>
+                <option value="Anand">Anand</option>
+
+                <option value="Bharuch">Bharuch</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Botad">Botad</option>
+                <option value="Dahod">Dahod</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+                <option value="Jamnagar">Jamnagar</option>
+                <option value="Junagadh">Junagadh</option>
+                <option value="Kheda">Kheda</option>
+                <option value="Morbi">Morbi</option>
+
+                <option value="Porbandar">Porbandar</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Surat">Surat</option>
+                <option value="Surendranagar">Surendranagar</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Valsad">Valsad</option>
+
+              </select>
+
+            </div>
+            </div>
+            <div style="width:80%; border: 1px solid black; height: 350px;" class="" id="G3">
+            <canvas id="myChart"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+            <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+            <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+            <script type="text/javascript" src="../public/css/graph3.js"></script>
+         <!--   <script type="text/javascript">
+
+              $("#dropdown-container a").click(function(e){
+
+                e.preventDefault();
+                var toShow1 = $(this).attr('id');
+                if(toShow1=="t"){
+                  document.getElementById("mySelect1").onchange = function(){
+                    alert("h");
+                    $.getJSON('http://localhost:3500/weather/forecast').done(function(data) {
+                      var district = document.getElementById('mySelect1').value;
+
+                      var i;
+                      var a = [];
+                      for (i=0;i<data.length; i++){
+                        if(data[i].city == district){
+                          a.push(data[i])
+                        }
+                      }
+                      var time = [];
+                      var temp = [];
+                      for (var i in data){
+                        time.push(data[i].time);
+                        temp.push(data[i].temperature);
+                      }
+                      var options2 = {
+                      title: {
+                        text: "Temperature Forecast"
+                      },
+                      axisX: {
+                        labelFontSize: 20,
+                        labelFontColor: "dimGrey",
+                        title: "Date"
+                      },
+                      axisY: {
+                        title: "Temperature(in Celsius)"
+                      },
+                      animationEnabled: true,
+                      exportEnabled: true,
+                      data: [
+                      {
+                        type: "spline",
+                        showInLegend: true,
+                        legendText: "Average Temperature", //change it to line, area, column, pie, etc
+                        dataPoints: [
+
+                          { x: 1, y: temp[0], label: time[0] },
+                          { x: 2, y: temp[1], label: time[1] },
+                          { x: 3, y: temp[2], label: time[2] },
+                          { x: 4, y: temp[3], label: time[3] },
+                          { x: 5, y: temp[4], label: time[4] },
+                          { x: 6, y: temp[5], label: time[5] },
+                          { x: 7, y: temp[6], label: time[6] },
+                          { x: 8, y: temp[7], label: time[7] },
+                          { x: 9, y: temp[8], label: time[8] },
+                          { x: 10, y: temp[9], label: time[9] },
+                          { x: 11, y: temp[10], label: time[10] },
+                          { x: 12, y: temp[11], label: time[11] },
+                          { x: 13, y: temp[12], label: time[12] },
+                          { x: 14, y: temp[13], label: time[13] },
+                          { x: 15, y: temp[14], label: time[14] },
+                          { x: 16, y: temp[15], label: time[15] },
+                          { x: 17, y: temp[16], label: time[16] },
+                          { x: 18, y: temp[17], label: time[17] },
+                          { x: 19, y: temp[18], label: time[18] },
+                          { x: 20, y: temp[19], label: time[19] },
+                          { x: 21, y: temp[20], label: time[20] },
+                          { x: 22, y: temp[21], label: time[21] },
+                          { x: 23, y: temp[22], label: time[22] },
+                          { x: 24, y: temp[23], label: time[23] },
+                          { x: 25, y: temp[24], label: time[24] },
+                          { x: 26, y: temp[25], label: time[25] },
+                          { x: 27, y: temp[26], label: time[26] },
+                          { x: 28, y: temp[27], label: time[27] },
+                          { x: 29, y: temp[28], label: time[28] },
+                          { x: 30, y: temp[29], label: time[29] },
+                          { x: 31, y: temp[30], label: time[30] },
+                          { x: 32, y: temp[31], label: time[31] },
+                          { x: 33, y: temp[32], label: time[32] },
+                          { x: 34, y: temp[33], label: time[33] },
+                          { x: 35, y: temp[34], label: time[34] },
+                          { x: 36, y: temp[35], label: time[35] },
+                          { x: 37, y: temp[36], label: time[36] },
+                          //{ x: 4, y: b[3].temperature, label: b[3].date }
+
+                        ]
+                      },
+
+
+                      ]
+                    };
+                    $("#G3").CanvasJSChart(options2);
+
+
+                  })
+                  };
+                }
+                else if(toShow1=="w"){
+
+                  document.getElementById('mySelect1').onchange = function(){
+
+
+                    $.getJSON('http://localhost:3500/weather/forecast').done(function(data) {
+                    var search = document.getElementById('mySelect1').value;
+                    var i;
+                    var a = [];
+                    for (i=0;i<data.length; i++){
+                      if(data[i].city == search){
+                        a.push(data[i])
+
+                      }
+
+                    }
+                    var time = [];
+                      var wind = [];
+                      for (var i in data){
+                        time.push(data[i].time);
+                        wind.push(data[i].wind_speed);
+                      }
+                    //var text = `district: ${data[0].city}<br>average_temperature: ${data[0].average_temperature}<br>date:${data[0].date}`;
+                    //document.getElementById('G1').innerHTML = text;
+                    var options2 = {
+                      title: {
+                        text: "Wind_speed Forecast"
+                      },
+                      axisX: {
+                        labelFontSize: 20,
+                        labelFontColor: "dimGrey",
+                        title: "Date"
+                      },
+                      axisY: {
+                        title: "Wind Speed(in km/hr)"
+                      },
+                      animationEnabled: true,
+                      exportEnabled: true,
+                      data: [
+                      {
+                        type: "spline",
+                        showInLegend: true,
+                        legendText: "Average Wind Speed", //change it to line, area, column, pie, etc
+                         dataPoints: [
+
+                          { x: 1, y: wind[0], label: time[0] },
+                          { x: 2, y: wind[1], label: time[1] },
+                          { x: 3, y: wind[2], label: time[2] },
+                          { x: 4, y: wind[3], label: time[3] },
+                          { x: 5, y: wind[4], label: time[4] },
+                          { x: 6, y: wind[5], label: time[5] },
+                          { x: 7, y: wind[6], label: time[6] },
+                          { x: 8, y: wind[7], label: time[7] },
+                          { x: 9, y: wind[8], label: time[8] },
+                          { x: 10, y: wind[9], label: time[9] },
+                          { x: 11, y: wind[10], label: time[10] },
+                          { x: 12, y: wind[11], label: time[11] },
+                          { x: 13, y: wind[12], label: time[12] },
+                          { x: 14, y: wind[13], label: time[13] },
+                          { x: 15, y: wind[14], label: time[14] },
+                          { x: 16, y: wind[15], label: time[15] },
+                          { x: 17, y: wind[16], label: time[16] },
+                          { x: 18, y: wind[17], label: time[17] },
+                          { x: 19, y: wind[18], label: time[18] },
+                          { x: 20, y: wind[19], label: time[19] },
+                          { x: 21, y: wind[20], label: time[20] },
+                          { x: 22, y: wind[21], label: time[21] },
+                          { x: 23, y: wind[22], label: time[22] },
+                          { x: 24, y: wind[23], label: time[23] },
+                          { x: 25, y: wind[24], label: time[24] },
+                          { x: 26, y: wind[25], label: time[25] },
+                          { x: 27, y: wind[26], label: time[26] },
+                          { x: 28, y: wind[27], label: time[27] },
+                          { x: 29, y: wind[28], label: time[28] },
+                          { x: 30, y: wind[29], label: time[29] },
+                          { x: 31, y: wind[30], label: time[30] },
+                          { x: 32, y: wind[31], label: time[31] },
+                          { x: 33, y: wind[32], label: time[32] },
+                          { x: 34, y: wind[33], label: time[33] },
+                          { x: 35, y: wind[34], label: time[34] },
+                          { x: 36, y: wind[35], label: time[35] },
+                          { x: 37, y: wind[36], label: time[36] },
+                          //{ x: 4, y: b[3].temperature, label: b[3].date }
+
+                        ]
+                      },]}
+
+                    $("#G3").CanvasJSChart(options2);
+
+                    })
+
+                };
+              }
+
+              })
+
+           </script>-->
+
+          </div>
+          </div>
+          <script type="text/javascript" src="/css/menu.js"></script>>
+
+
+
+
+
+
+
+
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
+  <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+</body>
+
+</html>

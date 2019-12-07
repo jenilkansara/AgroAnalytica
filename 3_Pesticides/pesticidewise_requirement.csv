@@ -1,0 +1,279 @@
+Pesticides,Group,2010-11,2011-12,2012-13,2013-14,2014-15,2015-16,2016-17
+Acephate,i,1461,132,30,319,357,340,370
+Acetamiprid,i,63,2,4,46,52,63,87
+Aldicarb,i,5,,,,,,
+Aldrin,i,,,,,,,
+Allethrin,i,0.1,1,6,3,3,4,18
+Alpha Cypermethrin,i,130,9,8,30,28,22,60
+Alphamethrin,i,150,,0.6,1,1,0.04,0.14
+Alphamethrin+Chlorpyrifos,i,,,,,,,
+Beta cyfluthrin,i,,,,,,,1
+BHC,i,0.29,,,,,,
+Bifenthrin,i,,,2,4,42,2,41
+BPMC,i,,,,,,,
+Buprofezin ,i,,6,9,9,18,16,75
+Carbamate,i,,,,,,,
+Carbaryl,i,140,5,6,52,48,48,211
+Carbofuran,i,,2292,235,370,359,339,367
+Carbosulfan,i,15,46,49,48,87,44,104
+Cartap Hydrochloride,i,1678,1638,231,293,371,267,357
+Chlorantraniliprole,i,,,,30,73,5,244
+Chlordane,i,,,,,,,
+Chlorfenapyr,i,,,1,1,,,2
+Chlorfenvinphos,i,,,,,493,,
+Chloroantipola,i,,,1,,,,
+Chlorobenzilate,i,,,,,,,
+Chlorothalonil,i,,,1,,,2,14
+Chlorpyriphos,i,3133,464,183,4412,,502,1141
+Chlorpyriphos Methyl,i,,301,1,,,,
+Chlorpyriphos+Cyphermetherin,i,,,,,5,1,8
+Ciflubenzuron,i,,,,,,,
+Clothianidin,i,,,,,1,1,1
+Cyantraniliprole,i,,,,,,,2
+Cyfluthrin,i,,,,,,2,9
+Cymoxanil ,i,,,1,,2,2,
+Cymoxanil +Famoxadone,i,,,,,,,2
+Cymoxanil +Mancozeb,i,,,,,,,729
+Cypermethrin,i,2167,81,59,261,246,295,
+Cypermethrin+Quinalophos,i,,,,,,,
+Cyphenothrin,i,,,1,,,,
+Cyphermethrin+Chlorpyriphos,i,,,3,2,,,
+DDT,i,,,,,,,
+DDVP,i,200,,,,,,
+Decamethrin,i,,,4,,19,20,
+Delan,i,,,,,,,
+Deltamethrin,i,80,10,,20,,,64
+Deltamethrin+Triazophos,i,,,,,,0.05,0.06
+Diazinon,i,,,,,,,
+Dicarbamate,i,,,,,,,
+Dichlorvos,i,693,347,258,428,414,406,675
+Dicofol,i,,,,,,10,56
+Difenthiuron,i,,,,0.15,0.15,2,11
+Diflubenzuron,i,,,0.05,,,,6
+Dimethoate,i,536,193,112,243,208,204,424
+D-trans Allethrin,i,,,7,5,4,5,29
+Emamection Benzoate,i,,,1,30,47,47,89
+Emazithaper,i,,,,,,,2
+Endosulfan,i,2857,197,,,,,
+Ethephon,i,6,1.49,5,6,14,17,49
+Ethion,i,141,15,4,30,20,28,61
+Ethiprole,i,,,,,,2,3
+Ethofenprox,i,,1,1,1,1,1,7
+Febubucarb (BPMC),i,,2,2,2,3,3,137
+Fenarimol,i,,0.25,,,,,
+Fenitrothion,i,120,0.11,,,,3,30
+Fenopropathrin,i,,,,,,,1
+Fenpropathrin,i,,,,,,1,
+Fenpyroximate,i,,,,,,,
+Fenthion,i,14,0.1,,3,5,8,19
+Fenvalerate,i,591,583,98,201,215,231,534
+Fipronil,i,,172,260,338,431,430,628
+Flubendiamide,i,4,,,0.06,3,3,24
+Fluvalinate,i,,1,,,,,
+Formothion,i,,,,,,,
+Heptachlor,i,,,,,,,
+Imidachloprid,i,429,148,139,239,297,308,397
+Imiprothrin,i,,,,,1,1,
+Indoxacarb,i,,2,2,22,55,55,102
+Isoprothiolane,i,,,,,,,18
+Lamda-cyahalothrin,i,,258,43,75,129,139,170
+Lindane,i,314,2,,,,0.2,0.1
+Malathion,i,3571,1213,498,626,550,668,989
+Menazone,i,,,,,,,
+Metal-dehyde,i,7,,,,,,0.26
+Methomyl,i,20,,,,,,
+Metolachlor,i,,,,,,,3
+Methyl Parathion,i,1406,837,716,937,795,714,520
+Methyl-O-Demeton,i,,,,,,,0.15
+Metsulfuron Methyl,i,27,4,50,46,59,147,144
+Monocrotophos,i,1507,416,236,495,323,420,538
+Myclobutanil,i,1,1,1,2,2,4,5
+Neem based insecticides,i,225,65,4,64,15,15,27
+Nuvan (Systemic),i,,,,,,,
+Oxydemeton methyl,i,79,43,8,25,15,10,18
+Paradichlorobenzene,i,,,,,,,
+Permethrin,i,,,1,,,1,7
+Phenthoate,i,,2,2,2,1,1,1
+Phorate,i,1156,394,237,547,489,432,893
+Phosalone,i,75,15,0.05,12,2,6,48
+Phosphamidon,i,199,88,64,112,100,95,106
+Prallethrin,i,,,2,,,,4
+Primiphosmethyl,i,,,,,,1,7
+Profenofos + Cypermethrin,i,,,,,,0.49,3
+Profenophos,i,,48,46,137,320,334,412
+Propargite,i,,2,19,16,14,14,34
+Propatamphos,i,,,,,,,
+Propoxur,i,,,,,,,26
+Pyrethrum,i,8,,,,,4,5
+Quinalphos,i,1063,457,346,569,563,533,806
+Sevidol,i,,,,,,,
+Spinosad,i,93,,,,,,
+Synthetic pyrethroid,i,,,,,,,
+Temephos,i,52,,,12,5,5,27
+Thiacloprid,i,,2,1,,2,2,2
+Thiodicarb,i,,,,,1,1,1
+Thiomethoxam,i,,2,2,18,46,54,84
+Thiometon,i,,,,,,,
+Toxaphene,i,,,,,,,
+Transfluthrin,i,,,1,,,,
+Triazophos,i,1109,111,25,226,338,307,418
+Trifluralin,i,,,,,,,
+Agromycin+ Streptocyclene,f,,,,,,,
+Antiboitic,f,,,,,,,
+Aureofungin,f,3,2,,,,,
+Azoxystrobin,f,,2,,,2,3,22
+Benomyl,f,,2,1,1,,,
+Bispyribac Sodium,f,,11,11,0.07,28,47,70
+Bitertanol,f,,3,0.81,,0.92,0.93,0.94
+Blitox,f,,,,,,,
+Calcium Cynide,f,,,,,,,
+Captafol/Difolaton,f,7,,,,,,14
+Captan,f,220,47,44,79,58,58,150
+Captan+Hexaconazole,f,,,,,,16,19
+Carbendazim,f,988,645,371,552,493,587,694
+Carbendazim+Mancozeb,f,,,,,,25,42
+Carboxin,f,,4,3,3,3,3,31
+Carboxin+Thiram,f,,,,,,,
+Chlorthalonil,f,,1,,,,,
+Copper Hydroxide,f,15,,1,1,9,6,17
+Copper Oxychloride,f,685,718,282,369,390,425,497
+Copper Sulphate,f,1327,293,266,251,150,173,311
+Cuprous oxide,f,6,,,,,4,3
+Cyhalofop-N-Butyl,f,0.01,0.01,0.05,0.002,0.86,0.86,0.33
+Dicofol,f,66,6,5,26,13,,
+Difencanazole,f,,0.86,0.96,1,1,3,5
+Difolaton,f,,,,,,,
+Dimethomorph,f,,,,,,0.02,2
+Dimethomorph+Ametroctadin,f,,,,,,,1
+Dinocap,f,0.21,7,5,5,3,4,4
+Dithianon,f,,,,,,,
+Dodine,f,,,,,,,
+Ediphenphos,f,,1,,,,,15
+Fenarimol,f,,,0.27,,0.45,0.46,0.46
+Fenazaquin,f,0.59,0.59,0.65,,0.62,1,2
+Fenoxaprop-P- Ethyle,f,8,1,1,,2,2,3
+Ferbam,f,,,,,,,
+Flusilazole,f,,,1,3,2,4,4
+Fosetyl-AL,f,,,,,1,1,1
+Hexaconazole,f,218,24,36,117,214,220,212
+Hexythiazox,f,,,,,,0.5,0.52
+Iprobenofos,f,,2,,1,1,1,1
+Iprovalicarb,f,,,,,,,13
+Isoprothiolane,f,,,,,,1,
+Kasugamycine,f,,1,2,2,3,3,10
+Kitazine,f,,0.12,0.12,0.37,0.54,0.54,15
+Krewesoxim methyl,f,,,,,,,1
+Lime sulphur,f,58,,2,26,23,19,31
+Mancozeb,f,2667,2015,1919,2377,2202,2193,3156
+Mancozeb+Carbendazim,f,29,180,18,13,15,18,31
+Mancozeb+Fenamidon,f,,,,,,,2
+Mancozeb+Metalaxyl,f,,,,,2,1,4
+MEMC,f,,,5,6,2,2,13
+MEMC+EMC,f,6,23,,,,,
+Metalaxyl,f,3,4,9,9,9,9,73
+Metalaxyl+Carbendazim,f,,,,,,,0.18
+Metalaxyl+Mancozeb,f,0,150,0,3,0.17,0.6,0.61
+Methomyl,f,,2,2,1,3,3,3
+Metiram,f,,,,,1,1,1
+Metiram+Pyraclostrobin,f,,,,,,3,3
+Metribuzin,f,7,,,,,,
+Mychlobutanil,f,,,,,,,
+Nickel Chloride,f,3,,,,,,
+Novaluron,f,,4,2,1,,9,14
+Organomercurials,f,,,,,,,
+Oxycarboxin,f,,,,,,,
+PCNB,f,,,,,,,
+Penconazole,f,0.58,5,,,,,
+Pencycuron,f,,,6,4,8,8,7
+Perisgreen,f,,,,,,,
+Picoxystrobin,f,,,,,,,1
+PMA,f,,,,,,,
+Propaquizafop,f,,,0.05,,,0.05,0.05
+Propiconazole,f,,,10,31,42,95,170
+Propineb,f,4,1,22,,47,103,145
+Propineb+Iprovalicarb,f,,,,,,,1
+Pyraclostrobin,f,,,,19,,,18
+Pyrazosulfaron,f,,2,,,,,
+Pyrazosulfaron ethyl,f,,,,,20,56,102
+Pyriproxyfen,f,,,,,,,1
+Quizalofop-P-Ethyl,f,,,2,8,12,14,43
+Spinosad,f,,,,,,1,83
+Spiromesifen,f,,,,,,1,1
+Streptocycline,f,33,,0.1,3,0.1,,38
+Streptomycin+Tetracyclene,f,,2,2,2,2,2,4
+Sulfosulfuron,f,5,27,78,80,91,191,241
+Sulphur (Dust & WP),f,2366,899,774,949,1380,1649,1572
+Teboconazole,f,,7,4,2,4,4,22
+Thiophanate-Methyle,f,0.48,32,25,30,37,53,95
+Thiram,f,200,219,210,258,259,278,244
+Triademefon,f,,,,,,,
+Tricyclazole,f,10,2,4,7,7,5,82
+Tricyclazole+Propiconazole,f,,,,,,,1
+Tridemorph,f,49,24,3,6,4,4,6
+Trifloxystrobin,f,,,,,,2,2
+Zineb,f,166,312,303,332,304,358,365
+Ziram,f,127,77,70,82,66,93,134
+"2,4-D Dichlorophenoxy Acetic Acid",h,429,319,489,535,1084,779,727
+"2,4-D Amine Salt",h,,,,,,3,2
+"2,4-D Ethyl Ester",h,,,,,,8,7
+"2,4-D Sodium Salt",h,,,,,,17,0.64
+Alachlor,h,124,20,1,12,16,15,37
+Anilophos,h,1394,95,90,113,95,107,235
+Atrazine,h,318,149,68,107,178,282,231
+Bensulfuron,h,,,1,,,,
+Bensulfuron Methyl + Pretilachlor,h,,,,,,,5
+Bensulfuron+Pretilachlor,h,,,,,,16,
+Benthiocarb,h,,,,,,,2
+Butachlor,h,2421,832,752,1178,892,760,858
+Carfentrazone Ethyle,h,,2,1,1,,1,1
+Chlodinafop-propargyl,h,,5,47,55,45,109,
+Chlorimuron ethyl,h,,1,,,,,194
+Clomazone,h,,,3,1,1,1,1
+Dalapon,h,3,0.7,,,,0.6,1
+Diuron,h,316,2,0.05,2,26,26,67
+Dodine,h,,66,73,80,85,92,101
+Ethoxysulfuron,h,,1,1,1,1,1,
+Fluchloralin,h,49,13,5,4,3,9,6
+Glyphosate,h,1000,889,10987,336,631,522,449
+Halosulfuron methyl,h,,,,,,,5
+Imazamox,h,,,,,,2,3
+Imazathatyr,h,,2,8,10,57,58,63
+Imiprothrin,h,,,,,,,1
+Isoproturon,h,842,744,710,728,622,102,276
+Linuron,h,,1,,,,,
+MCPA,h,,,,,,,
+Mepiquate Chloride,h,,,,,,,1
+Metalachlor,h,,1,,,,,
+Methabenzthiazuron,h,,,,,,,
+Metoxuron,h,,,,,,,
+Metribuzin,h,,91,86,89,100,98,167
+MSMA,h,,,,,,,
+Nitrofen,h,,,,,,,
+Oxadiargyl,h,,,,,2,2,13
+Oxadiazon,h,,,,,,,7
+Oxyfluorfen,h,0.01,9,3,4,5,5,13
+Paraquat Dichloride,h,131,622,29,139,200,82,72
+Pendimethalene,h,,,56,83,247,,
+Pendimethalin,h,4,40,,,,168,232
+Piroxofop propanil,h,,,,,,,
+Pretilachlor,h,154,81,101,111,254,348,371
+Paclobutrazole,h,,,,,,,8
+Propanil,h,13,2,3,4,5,6,9
+Simazine,h,,,,,,,0.8
+Simazine,h,,0.5,,,,0.2,
+TCA,h,,,,,,,
+Trifluralin,h,,,,,,,
+Trillate,h,,,,,,,1
+Aluminium Phosphide,r,36,100,82,106,112,130,151
+Anticoaqulants,r,,,,,,,
+Barium Carbonate,r,2,,,,,4,5
+Bromadiolone,r,3,3,2,9,9,8,25
+Coumachlor,r,,,,,,5,3
+DD Mixture,r,,,,,,,
+EDCT Mixture,r,2,,1,3,3,8,11
+Ethylene Dibromide,r,5,,,,,16,17
+MB+EDB,r,,,,,,,
+Methyl Bromide,r,17,,,6,10,12,12
+Tetradifon,r,,,,,,,
+Warfarin,r,2,,,,,,0.04
+Zinc Phosphide,r,96,110,83,124,107,121,217
