@@ -8,7 +8,7 @@ Python: 2.7
 Libraries: netifaces, flask, dash, dash_core_components, dash_html_components, 
 	   pandas, json, plotly, sqlite3, requests, sys, os
 
-Project Folder Structure:
+# Project Folder Structure:
 
 1_Website - Contains the html framework of the project including CSS dependencies. Also contains the 5th Module Krishi Mantra.
 
@@ -18,13 +18,13 @@ Project Folder Structure:
 
 4_Market - Contains sourcefiles of Crop Market Data Feature. 
 
-How to Run:
+# How to Run:
 
 1: From 1_Website, run AgroAnalytica.py
 2: From 2_Weather, run REST_Weather.py, forecast.py, rainfall.py
 3: From 4_Market, run marketprices.py
 
-How to change the configuration for a new deployment:
+# How to change the configuration for a new deployment:
 
 1:For all the python files, AgroAnalytica.py, REST_Weather.py, forecast.py, rainfall.py, run marketprices.py, there is an app.run.server entity at the end of every source file. which looks as following.
 
